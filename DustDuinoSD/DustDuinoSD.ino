@@ -49,7 +49,9 @@ float countP2;
 
 void setup(){
   Serial.begin(9600);
-
+  
+  pinMode(3, INPUT);
+  pinMode(2, INPUT);
   
    Serial.print("Initializing SD card...");
   // make sure that the default chip select pin is set to
@@ -74,6 +76,8 @@ void setup(){
 }
 
 void loop(){
+  
+  digitalWrite(7) = HIGH;
   
   valP1 = digitalRead(3);
   valP2 = digitalRead(2);
